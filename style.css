@@ -2,36 +2,139 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') 
+}
     
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 110px; 
+
 }
-.main #input{
-    height: 20px;
-    width: 200px;
-    padding: 5px;
+main:hover{
+     /* transform: translateY(-50%) scale(1.1); */
+    color: #00d4ff;
+
+}
+input {
+    padding: 14px 18px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    background: #161b22;
+    color: #fff;
     font-size: 16px;
-    color: white;
-    background-color: black;
+    outline: none;
+    transition: all 0.3s ease;
 }
-#input:hover{
-    background: grey;
-    color: black;
-    box-shadow: 0 0 20px purple;
-    font-family: 'Gill Sans', 'Gill Sans MT';
-    transition: all 0.3s ease-in;
+
+.input:hover{
+    transform: translateY(-50%) scale(1.1);
+    color: #00d4ff;
 }
-button{
-    height: 33px;
-    width: 50px;
-    margin-left: 20px;
+
+input:focus {
+    transform: translateY(-180%) scale(0.9);
+    color: #00d4ff;
+    width: 350px;
+    height: 30px;
 }
-button:hover{
-    box-shadow: 0 0 20px purple;
-    background-color: grey;
-    font-weight: 500;
-    transition: all 0.3s ease-in;
+
+input:hover {
+    border-color: #00d4ff;
+    box-shadow: 0 0 12px #00d4ff44;
+}
+
+button {
+    position: relative;
+    background: #161b22;
+    color: #fff;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+button:hover {
+    border-color: #00d4ff;
+    box-shadow: 0 0 15px #00d4ff55;
+    background: #0f141a;
+    transform: scale(1.05);
+}
+
+  button span {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+button:hover span {
+    transform: scale(1.2);
+    color: #00d4ff;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 212, 255, 0.2);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+button:hover::before {
+    width: 250%;
+    height: 250%;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    input {
+        width: 80vw;
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+    button {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    input {
+        width: 70vw;
+        font-size: 15px;
+    }
+    button {
+        padding: 14px 34px;
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    input {
+        width: 350px;
+    }
+    button {
+        font-size: 16px;
+    }
 }

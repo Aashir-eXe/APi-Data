@@ -11,9 +11,9 @@ function getUserData() {
             users.innerHTML = "";
 
             const row = `
-                <div style="text-align:center; background:#f5f5f5; padding:20px; border-radius:15px; width:400px; margin:auto; font-family:Arial;">
+            <div style="text-align:center; padding:10px; border-radius:15px; width:400px; margin:auto; font-family:Arial;">
 
-                            <img src="${data.avatar_url}" width="400" hight="400px"/>    
+                  <img src="${data.avatar_url}" width="400" hight="400px"/>    
 
                 <h1>Name : ${data.name}</h1>
                 
